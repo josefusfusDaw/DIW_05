@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Jose Luis Saez Sanchez" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"> <!-- Cargo los iconos de Bootstrap-->
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <title>DASHBOARD - Gestión de usuarios</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!--- Titulo y navbar -->
+        <div class="bg-white">
+            <div class="sidebar-heading text-center py-4 primary-text fs-4 fw-bold">
+                MI TIENDA OUTLET
+            </div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light"> <!-- Configuro la parte de la barra de navegacion se expande a partir de pantallas grandes sino aparace replegada-->
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">MI TIENDA OUTLET</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link bg-primary second-text fw-bold active" aria-current="page"
+                                    href="#"><i class="bi bi-activity"></i>Dashboard</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link bg-transparent second-text fw-bold" aria-current="page"
+                                    href="#"><i class="bi bi-person-fill"></i>Usuarios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link bg-transparent second-text fw-bold" href="#"><i class="bi bi-pc-display-horizontal"></i> Productos</a><!-- He usado iconos de bootstrap-->
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link bg-transparent second-text fw-bold" href="#"><i class="bi bi-bar-chart-line-fill"></i> Graficos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link bg-transparent second-text fw-bold" href="#"><i class="bi bi-card-text"></i> Informes</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link bg-transparent second-text fw-bold" href="#"><i class="bi bi-box-arrow-right"></i> Cerrar sesion</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!--- Parte Dashboard-->
+            <div id="main-page" class="container-fluid">
+                <h2 class="my-3">Dashboard</h2>
+
+                <div class="row row-cols-xl-3 row-cols-1"> <!-- Aqui configuro que si la pantalla es grande aparezcan los tres en linea y se iran replegando segun se vaya haciendo pequeña la pantalla hasta quedar en una sola columna.-->
+                    <div class="col card shadow m-3 callout-info w-auto mx-auto">
+                        <div class="card-body">
+                            <p class="fw-bold text-info"> INGRESOS (Anual)</p>
+                            <h3>1300,00 €</h3>
+                        </div>
+                    </div>
+                    <div class="col card shadow m-3 callout-primary w-auto mx-auto">
+                        <div class="card-body">
+                            <p class="fw-bold text-primary">GASTOS (Anual)</p>
+                            <h3>1000,00 €</h3>
+                        </div>
+                    </div>
+                    <div class="col card shadow m-3 callout-success w-auto mx-auto">
+                        <div class="card-body">
+                            <p class="fw-bold text-success">BENEFICIOS (Anual)</p>
+                            <h3>300,00 </h3>
+                        </div>
+                    </div>
+                </div>
+
+
+                <h2 class="my-3">Productos </h2>
+                <div class="card shadow">
+                    <div class="card-header fw-bold">Productos más vendidos</div>
+
+                    <!-- PARTE DE LOS PRODUCTOS , HE USADO CARDS DE BOOTSTRAP-->
+                    <div class="row row-cols-1 row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 g-4"> <!-- Aqui configuro los items que quiero que vayan apareciendo segun el tamaño de la pantalla-->
+                        <div class="col">
+                            <div class="card align-items-center vh-50">
+                                <img src="./img/xiaomi.png" class="img-fluid w-25 pt-2"
+                                    alt="Xiaomi Redmi Note 9 Pro 6/64GB Verde Tropical">
+                                <div class="card-body">
+                                    <h5 class="card-title">Xiaomi Redmi Note 9 Pro 6/64GB Verde Tropical</h5>
+                                    <p class="card-text">
+                                    <h6>Ventas</h6> 1232</p>
+                                    <p class="card-text">
+                                    <h6>Codigo</h6> 299423</p>
+                                    <p class="card-text">
+                                    <h6>Precio</h6> 250,25 €</p>
+                                </div>
+                                <div class="card-footer"><span class="btn btn-primary rounded-pill">Smartphone</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card align-items-center vh-50">
+                                <img src="./img/pantalla.png" class="img-fluid w-25 pt-2"
+                                    alt="NewSkill Icarus RGB 27 LED Fast IPS QHD 180Hz G-Sync Compatible">
+                                <div class="card-body">
+                                    <h5 class="card-title">NewSkill Icarus RGB 27" LED Fast IPS QHD 180Hz G-Sync
+                                        Compatible</h5>
+                                    <p class="card-text">
+                                    <h6>Ventas</h6> 1000</p>
+                                    <p class="card-text">
+                                    <h6>Codigo</h6> 414013</p>
+                                    <p class="card-text">
+                                    <h6>Precio</h6> 343,98 €</p>
+                                </div>
+                                <div class="card-footer"><span class="btn btn-primary rounded-pill">Monitores</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card align-items-center vh-50">
+                                <img src="./img/mouse.png" alt="Tempest X20W Vigilant Raton Gaming Inalámbrico"
+                                    class="img-fluid w-25 pt-2">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tempest X20W Vigilant Raton Gaming Inalámbrico</h5>
+                                    <p class="card-text">
+                                    <h6>Ventas</h6> 855</p>
+                                    <p class="card-text">
+                                    <h6>Codigo</h6> 433507</p>
+                                    <p class="card-text">
+                                    <h6>Precio</h6> 49,99 €</p>
+                                </div>
+                                <div class="card-footer"><span class="btn btn-primary rounded-pill">Periféricos</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card align-items-center vh-50 pt-2">
+                                <img src="./img/webcam.png" alt="Logitech C920s Pro Webcam" class="img-fluid w-25">
+                                <div class="card-body">
+                                    <h5 class="card-title">CLogitech C920s Pro Webcam</h5>
+                                    <p class="card-text">
+                                    <h6>Ventas</h6> 711</p>
+                                    <p class="card-text">
+                                    <h6>Codigo</h6> 258324</p>
+                                    <p class="card-text">
+                                    <h6>Precio</h6> 75,99 €</p>
+                                </div>
+                                <div class="card-footer"><span class="btn btn-primary rounded-pill">Periféricos</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card align-items-center vh-50 pt-2">
+                                <img src="./img/torre.png" alt="Tempest Vapor USB 3.0 Ventana RGB Negro"
+                                    class="img-fluid w-25">
+                                <div class="card-body">
+                                    <h5 class="card-title">Tempest Vapor USB 3.0 Ventana RGB Negro</h5>
+                                    <p class="card-text">
+                                    <h6>Ventas</h6> 425</p>
+                                    <p class="card-text">
+                                    <h6>Codigo</h6> 386825</p>
+                                    <p class="card-text">
+                                    <h6>Precio</h6> 56,99 €</p>
+                                </div>
+                                <div class="card-footer"><span class="btn btn-primary rounded-pill">Componentes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <!-- ESTA ES LA PARTE DEL FOOTER, LA BANDA NEGRA, LA HE TENIDO QUE PONER ASI PORQUE EL CARD DE PRODUCTOS ME LA PISABA-->
+    <footer class="text-center fw-bold bg-dark p-4 text-white">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            Copyright © 2020
+        </div>
+        <!-- Copyright -->
+      </footer>
+</div>
+    
+    
+
+
+</body>
+
+</html>
